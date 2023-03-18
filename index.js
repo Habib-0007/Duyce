@@ -189,11 +189,14 @@ function copyQuote () {
 	
 	quoteContent.innerHTML = quoteString;
         quoteAuthor.innerHTML = author;
-
- 	var quoteText = quoteContent.textContent;
-	var authorName = authorName.textContent;
 	
-	navigator.clipboard.writeText(`${quoteContent} ${authorName}`);
+	q = quoteContent.innerHTML;
+        a = quoteAuthor.innerHTML;
+
+ 	var quoteText = q.textContent;
+	var authorName = a.textContent;
+	
+	navigator.clipboard.writeText(`${quoteText} ${authorName}`);
 
 	alert(`Quote by ${authorName} copied to clipboard`);
 }
