@@ -178,7 +178,7 @@ function printQuote () {
         
     }
 
-var copy = document.getElementById("copy");
+var copy = document.querySelector("#copy i");
 
 function copyQuote () {
 	var quoteText = quoteContent.textContent;
