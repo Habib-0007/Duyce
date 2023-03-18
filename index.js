@@ -161,13 +161,13 @@ function getRandomColor () {
 //Constructs a string containing the different properties of the quote object 
 function printQuote () {
 	var quotes = getRandomQuote ();
-	var quoteContent = document.getElementById("quote");
+	var quoteContent = document.querySelector("#quote q");
         var quoteAuthor = document.getElementById("author");
         var icons = document.querySelectorAll("footer li a");
-        var quoteString = `<p id="quote"> <q> ${quotes.quote} </q> </p>`;
+        var quoteString = `${quotes.quote}`;
         
-        var author = `<p id="author"> -${quotes.author} </p>`;
-					quoteContent.innerHTML = quoteString;
+        var author = `-${quotes.author}`;
+		    quoteContent.innerHTML = quoteString;
                     quoteAuthor.innerHTML = author;
 
         document.body.style.background = getRandomColor();
