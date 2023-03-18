@@ -179,12 +179,23 @@ function printQuote () {
     }
 
 function copyQuote () {
-// 	var quoteText = quoteString.textContent;
+	
+	var quoteContent = document.querySelector("#quote q");
+        var quoteAuthor = document.getElementById("author");
+	
+	var quoteString = `${quotes.quote}`;
+        
+        var author = `-${quotes.author}`;
+	
+	quoteContent.innerHTML = quoteString;
+        quoteAuthor.innerHTML = author;
+
+ 	var quoteText = quoteString.textContent;
 	var authorName = author.textContent;
 	
 	navigator.clipboard.writeText(`${quoteText} ${authorName}`);
 
-	alert("Quote by " + authorName + " copied to clipboard");
+	alert(`Quote by ${authorName} copied to clipboard`);
 }
 
 document.getElementById("copy").addEventListener("click", copyQuote, false);
