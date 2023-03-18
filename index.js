@@ -189,8 +189,8 @@ function copyQuote () {
 	quoteContent.textContent = quoteString;
         quoteAuthor.textContent = author;
 
- 	var quoteText = quoteContent.textContent;
-	var authorName = quoteAuthor.textContent;
+ 	var quoteText = quoteContent;
+	var authorName = quoteAuthor;
 	
 	navigator.clipboard.writeText(`${quoteText} ${authorName}`);
 
