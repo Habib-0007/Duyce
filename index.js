@@ -192,7 +192,7 @@ function copyQuote () {
  	var quoteText = quoteContent.textContent;
 	var authorName = quoteAuthor.textContent;
 	
-	navigator.clipboard.writeText(`${quoteContent.textContent} ${quoteAuthor.textContent}`);
+	navigator.clipboard.writeText(`${quoteText} ${quoteAuthor.textContent}`);
 
 	alert(`Quote by ${authorName} copied to clipboard`);
 }
