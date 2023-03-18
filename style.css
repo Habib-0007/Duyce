@@ -27,6 +27,13 @@ main {
     margin-bottom: 20px
 }
 
+p#copy {
+    text-align: right;
+    padding: 16px;
+    font-size: 32px;
+    color: #fff;
+}
+
 p#quote {
     font-size: 42px;
     padding: 24px;
