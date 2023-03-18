@@ -181,8 +181,8 @@ function printQuote () {
 var copy = document.querySelector("#copy i");
 
 function copyQuote () {
-	var quoteText = quoteContent.textContent;
-	var authorName = quoteAuthor.textContent;
+	var quoteText = quoteString.textContent;
+	var authorName = author.textContent;
 	
 	navigator.clipboard.writeText(`${quoteText} ${authorName}`);
 
