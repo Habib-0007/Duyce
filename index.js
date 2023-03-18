@@ -164,9 +164,9 @@ function printQuote () {
 	var quoteContent = document.querySelector("#quote q");
         var quoteAuthor = document.getElementById("author");
         var icons = document.querySelectorAll("footer li a");
-        var quoteString = `${quotes.quote}`;
+        var quoteString = ` <p> ${quotes.quote} </p>`;
         
-        var author = `-${quotes.author}`;
+        var author = ` <p> -${quotes.author} </p>`;
 		    quoteContent.innerHTML = quoteString;
                     quoteAuthor.innerHTML = author;
 
