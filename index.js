@@ -178,8 +178,6 @@ function printQuote () {
         
     }
 
-var copy = document.querySelector("#copy");
-
 function copyQuote () {
 // 	var quoteText = quoteString.textContent;
 	var authorName = author.textContent;
@@ -189,7 +187,7 @@ function copyQuote () {
 	alert("Quote by " + authorName + " copied to clipboard");
 }
 
-copy.addEventListener("click", copyQuote);
+document.getElementById("copy").addEventListener("click", copyQuote, false);
 
 //Quote automatically refreshes every 15 seconds
 window.setInterval(function(){
