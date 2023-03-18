@@ -160,8 +160,8 @@ function getRandomColor () {
 //Function to call the getRandomQuote function and stores the returned quote object in a variable
 //Constructs a string containing the different properties of the quote object 
 function printQuote () {
-		var quotes = getRandomQuote ();
-		var quoteContent = document.getElementById("quote");
+	var quotes = getRandomQuote ();
+	var quoteContent = document.getElementById("quote");
         var quoteAuthor = document.getElementById("author");
         var icons = document.querySelectorAll("footer li a");
         var quoteString = `<p id="quote"> <q> ${quotes.quote} </q> </p>`;
@@ -177,6 +177,19 @@ function printQuote () {
         }
         
     }
+
+var copy = document.getElementById("copy");
+
+function copyQuote () {
+	var quoteText = quoteContent.textContent;
+	var authorName = quoteAuthor.textContent;
+	
+	navigator.clipboard.writeText(`${quoteText} ${authorName}`);
+
+	alert(`Quote by ${authorName} copied to clipboard`);
+}
+
+copy.addEventListener("click", copyQuote);
 
 //Quote automatically refreshes every 15 seconds
 window.setInterval(function(){
