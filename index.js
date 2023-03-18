@@ -200,7 +200,7 @@ function copyQuote () {
 	alert(`Quote by ${authorName} copied to clipboard`);
 }
 
-document.querySelector("copy i").addEventListener("click", copyQuote);
+document.querySelector("#copy i").addEventListener("click", copyQuote);
 
 //Quote automatically refreshes every 15 seconds
 window.setInterval(function(){
