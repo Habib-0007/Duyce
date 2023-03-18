@@ -178,7 +178,7 @@ function printQuote () {
         
     }
 
-var copy = document.querySelector("#copy i");
+var copy = document.querySelector("#copy");
 
 function copyQuote () {
 // 	var quoteText = quoteString.textContent;
@@ -186,7 +186,7 @@ function copyQuote () {
 	
 	navigator.clipboard.writeText(`${quoteText} ${authorName}`);
 
-	alert(`Quote by ${authorName} copied to clipboard`);
+	alert("Quote by " + authorName + " copied to clipboard");
 }
 
 copy.addEventListener("click", copyQuote);
