@@ -181,9 +181,9 @@ function printQuote () {
 function copyQuote () {
 	
 	var quoteContent = document.querySelector("#quote q");
-        var quoteAuthor = document.getElementById("author");
+  var quoteAuthor = document.getElementById("author");
 	
-	var quoteString = `${quotes.quote}`;
+	/* var quoteString = `${quotes.quote}`;
         var author = `-${quotes.author}`;
 	
 	quoteContent.innerHTML = quoteString;
@@ -193,11 +193,11 @@ function copyQuote () {
 	a = quoteAuthor.innerHTML;
 
  	var quoteText = q.innerText;
-	var authorName = a.innerText;
+	var authorName = a.innerText; */
 	
-	navigator.clipboard.writeText(`${quoteText} ${quoteAuthor.textContent}`);
+	navigator.clipboard.writeText(`${quoteContent.textContent} ${quoteAuthor.textContent}`);
 
-	alert(`Quote by ${authorName} copied to clipboard`);
+	alert(`Quote by ${quoteAuthor.textContent} copied to clipboard`);
 }
 
 document.querySelector("#copy i").addEventListener("click", copyQuote);
